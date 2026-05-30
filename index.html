@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PLAYRIOT — A one-person app studio</title>
+<meta name="description" content="PLAYRIOT is a one-person app studio shipping small, sharp apps that each kill one annoying problem. Eight live on the App Store. Built fast with AI, by a 20-year Navy veteran." />
+<meta property="og:title" content="PLAYRIOT — A one-person app studio" />
+<meta property="og:description" content="Small, sharp apps that each kill one annoying problem. Eight live on the App Store." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://playriot.co" />
+<meta name="theme-color" content="#14131A" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#apps">Skip to apps</a>
+
+<!-- NAV -->
+<header class="nav" id="top">
+  <a class="wordmark" href="#top" aria-label="PLAYRIOT home">PLAY<span>RIOT</span><i class="dot" aria-hidden="true"></i></a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#apps">Apps</a>
+    <a href="#studio">Studio</a>
+    <a href="#approach">Approach</a>
+    <a class="nav-cta" href="#apps">8 live →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-side" aria-hidden="true">
+    <span>PLAYRIOT LLC</span><span>SAN DIEGO · CALIFORNIA</span>
+  </div>
+  <div class="hero-main">
+    <p class="eyebrow" data-reveal>A one-person app studio</p>
+    <h1 data-reveal>
+      I make small, sharp apps that each kill <span class="hl">one annoying problem</span>.
+    </h1>
+    <p class="lede" data-reveal>
+      Then I ship the next one. Eight live on the App Store today — built fast, with AI,
+      by a 20-year Navy veteran who'd rather finish than pitch.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a class="btn btn-primary" href="#apps">See the work</a>
+      <a class="btn btn-ghost" href="#studio">Meet the studio</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE: the problems we kill -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>forgotten subscriptions</span><i>✦</i><span>dealership fees</span><i>✦</i><span>jobsite math</span><i>✦</i><span>hitting your protein</span><i>✦</i><span>counting calories</span><i>✦</i><span>impulse buys</span><i>✦</i><span>getting home safe</span><i>✦</i><span>HVAC field math</span><i>✦</i>
+    <span>forgotten subscriptions</span><i>✦</i><span>dealership fees</span><i>✦</i><span>jobsite math</span><i>✦</i><span>hitting your protein</span><i>✦</i><span>counting calories</span><i>✦</i><span>impulse buys</span><i>✦</i><span>getting home safe</span><i>✦</i><span>HVAC field math</span><i>✦</i>
+  </div>
+</div>
+
+<!-- NUMBERS -->
+<section class="stats">
+  <div class="stat" data-reveal><b>8</b><span>apps live on the App Store</span></div>
+  <div class="stat" data-reveal><b>1</b><span>person, start to finish</span></div>
+  <div class="stat" data-reveal><b>$0</b><span>raised — bootstrapped</span></div>
+  <div class="stat" data-reveal><b>20</b><span>years of Navy discipline</span></div>
+</section>
+
+<!-- APPS / WORK INDEX -->
+<section class="apps" id="apps">
+  <div class="section-head" data-reveal>
+    <h2>The work</h2>
+    <p>Eight apps, each one earning its place by removing a specific friction. Tap any to open it on the App Store.</p>
+  </div>
+  <ol class="work-index" id="work-list"><!-- injected by script.js from apps data --></ol>
+</section>
+
+<!-- STUDIO / FOUNDER -->
+<section class="studio" id="studio">
+  <div class="studio-grid">
+    <div class="studio-copy" data-reveal>
+      <p class="eyebrow">The studio</p>
+      <h2>Built by one person.<br/>Run like a small ship.</h2>
+      <p>
+        PLAYRIOT is founded and run by <strong>Desmond Buchanan</strong> — a 20-year U.S. Navy
+        veteran turned solo builder. The studio runs on military discipline and modern tooling:
+        AI carries the heavy lifting, while judgment, taste, and the finishing stay human.
+      </p>
+      <p>
+        No team to manage, no funding to chase, no roadmap theater. Just a tight loop —
+        find a real, annoying problem, build the smallest thing that fixes it, ship it,
+        learn from real people, repeat.
+      </p>
+      <p class="creed">Faith and family first. Then the work.</p>
+    </div>
+    <aside class="studio-card" data-reveal aria-label="Studio facts">
+      <ul>
+        <li><span>Founder</span><b>Desmond Buchanan</b></li>
+        <li><span>Background</span><b>U.S. Navy, 20 years</b></li>
+        <li><span>Based</span><b>San Diego, CA</b></li>
+        <li><span>Entity</span><b>PLAYRIOT LLC</b></li>
+        <li><span>Stack</span><b>Swift · SwiftUI · AI</b></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="section-head" data-reveal>
+    <h2>How I build</h2>
+  </div>
+  <div class="principles">
+    <div class="principle" data-reveal><span>01</span><h3>Small over sprawling</h3><p>A focused app you actually finish beats a big one you don't. Scope is a feature.</p></div>
+    <div class="principle" data-reveal><span>02</span><h3>Real problems only</h3><p>If it doesn't remove a specific, nameable friction from someone's day, I don't build it.</p></div>
+    <div class="principle" data-reveal><span>03</span><h3>Ship, then learn</h3><p>Real users in the App Store teach faster — and truer — than any roadmap on a whiteboard.</p></div>
+    <div class="principle" data-reveal><span>04</span><h3>Discipline over hype</h3><p>Twenty years of it. The unglamorous last 10% is where most apps quietly die. I finish it.</p></div>
+  </div>
+</section>
+
+<!-- CTA / FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-cta" data-reveal>
+    <h2>Got a small, annoying problem?<br/>That's exactly my thing.</h2>
+    <a class="btn btn-primary" href="https://apps.apple.com/us/developer/playriot-llc/id1875195414" target="_blank" rel="noopener">Browse all apps on the App Store →</a>
+  </div>
+  <div class="footer-bottom">
+    <a class="wordmark small" href="#top">PLAY<span>RIOT</span><i class="dot"></i></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://apps.apple.com/us/developer/playriot-llc/id1875195414" target="_blank" rel="noopener">App Store</a>
+      <a href="https://www.linkedin.com/in/desmondb/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/CEOMrDB" target="_blank" rel="noopener">X</a>
+    </nav>
+    <p class="legal">© <span id="yr">2026</span> PLAYRIOT LLC · San Diego, California</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
