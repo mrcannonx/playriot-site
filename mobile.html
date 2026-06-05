@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>PLAYRIOT — the apps</title>
+<meta name="description" content="11 sharp iOS apps, each killing one specific, nameable friction. Tap any to open it on the App Store. Built fast, with AI, by a 20-year Navy veteran." />
+<meta name="theme-color" content="#F6F3EC" />
+<link rel="canonical" href="https://playriot.co/mobile" />
+<meta property="og:title" content="PLAYRIOT — the apps" />
+<meta property="og:description" content="11 sharp iOS apps, each killing one annoying problem. Tap any to open it on the App Store." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://playriot.co/mobile" />
+<meta property="og:image" content="https://playriot.co/assets/og.png" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta property="og:image:alt" content="PLAYRIOT — 11 apps live on the App Store" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PLAYRIOT — the apps" />
+<meta name="twitter:description" content="11 sharp iOS apps, each killing one annoying problem." />
+<meta name="twitter:image" content="https://playriot.co/assets/og.png" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#14131A; --ink-2:#211F2A; --ink-soft:#37343F;
+  --paper:#F6F3EC; --paper-2:#EFEADD; --line:#DED7C6;
+  --riot:#FF4A1C; --riot-deep:#D93C12;
+  --muted:#7A7565; --muted-d:#A8A292;
+  --maxw:560px; --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"General Sans",system-ui,-apple-system,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.55; font-size:17px;
+  -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent;
+  overflow-x:hidden;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) calc(env(safe-area-inset-bottom) + 10px) env(safe-area-inset-left);
+}
+h1,h2,h3,.wordmark,.num,.lt-tag{font-family:"Clash Display","General Sans",sans-serif;font-weight:700;line-height:1.04;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img{display:block}
+:focus-visible{outline:2.5px solid var(--riot);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:99;border-radius:0 0 8px 0}
+.skip:focus{left:0;top:0}
+
+.lt{max-width:var(--maxw);margin:0 auto;padding:clamp(30px,8vw,54px) clamp(18px,5vw,28px) 56px}
+
+/* progressive reveal: nothing is hidden unless JS is present */
+.js [data-reveal]{opacity:0;transform:translateY(16px)}
+.js [data-reveal].in{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+
+/* ---- IDENTITY HEADER ---- */
+.lt-head{text-align:center;margin-bottom:clamp(30px,7vw,44px)}
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--riot-deep);font-weight:600;margin-bottom:14px}
+.wordmark{font-size:clamp(2.1rem,10vw,2.9rem);font-weight:700;letter-spacing:-.03em;display:inline-flex;align-items:baseline;gap:1px}
+.wordmark span{transition:color .3s var(--ease)}
+.wordmark .dot{width:9px;height:9px;border-radius:50%;background:var(--riot);display:inline-block;margin-left:5px;transform:translateY(-2px)}
+@media(hover:hover){.wordmark:hover span{color:var(--riot)}}
+.lt-tag{font-size:clamp(1.2rem,5vw,1.55rem);margin:18px auto 0;max-width:17ch;color:var(--ink);line-height:1.12}
+.lt-tag .hl{position:relative;color:var(--riot);white-space:nowrap}
+.lt-tag .hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.04em;height:.10em;background:var(--riot);opacity:.28;border-radius:2px}
+.lt-sub{margin:14px auto 0;max-width:30ch;color:var(--ink-soft);font-size:.98rem;line-height:1.45}
+.lt-chip{display:inline-flex;align-items:center;gap:9px;margin-top:22px;font-size:.85rem;font-weight:600;color:var(--ink);border:1.5px solid var(--line);background:var(--paper-2);padding:8px 16px;border-radius:100px}
+.lt-chip .live{width:8px;height:8px;border-radius:50%;background:var(--riot);position:relative;flex:0 0 auto}
+.lt-chip .live::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--riot);animation:ping 2s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(2.7);opacity:0}}
+
+/* ---- SECTION HEAD ---- */
+.section-head{margin:0}
+.section-head h2{font-size:clamp(1.75rem,6.5vw,2.35rem)}
+.section-head p{color:var(--ink-soft);margin-top:11px;font-size:1.01rem;line-height:1.5}
+
+/* ---- WORK INDEX (mirrors the main site) ---- */
+.work-index{list-style:none;margin-top:20px;border-top:1px solid var(--line);--row-indent:clamp(56px,17vw,84px)}
+.work-item{border-bottom:1px solid var(--line)}
+.work-row{display:flex;align-items:stretch}
+.work-main{flex:1 1 auto;min-width:0;display:grid;grid-template-columns:24px 52px 1fr;align-items:center;gap:13px;padding:16px 4px;transition:background .25s var(--ease),padding .25s var(--ease)}
+.work-main:active{background:var(--paper-2)}
+@media(hover:hover){.work-main:hover{background:var(--paper-2);padding-left:10px}.work-main:hover .name{color:var(--riot)}}
+.work-row .num{font-size:.88rem;color:var(--muted);font-weight:600;font-feature-settings:"tnum"}
+.work-row .ic{width:52px;height:52px;border-radius:13px;box-shadow:0 5px 18px rgba(20,19,26,.13);border:1px solid rgba(0,0,0,.06)}
+.work-row .meta{min-width:0;display:flex;flex-direction:column;gap:2px}
+.work-row .name{font-family:"Clash Display",sans-serif;font-weight:600;font-size:clamp(1.18rem,5vw,1.42rem);letter-spacing:-.02em;line-height:1.1;transition:color .2s}
+.work-row .prob{color:var(--ink-soft);font-size:.95rem;line-height:1.34}
+.work-row .cat{display:none}
+.work-toggle{flex:0 0 auto;width:48px;display:grid;place-items:center;cursor:pointer;background:none;border:0;border-left:1px solid var(--line);color:var(--ink);transition:color .2s,background .2s}
+.work-toggle:active{background:var(--paper-2)}
+@media(hover:hover){.work-toggle:hover{color:var(--riot);background:var(--paper-2)}}
+.work-toggle[aria-expanded="true"]{color:var(--riot)}
+.work-toggle .chev{transition:transform .35s var(--ease)}
+.work-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.work-desc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s var(--ease)}
+.work-desc.open{grid-template-rows:1fr}
+.work-desc-in{overflow:hidden;min-height:0}
+.work-desc-body{padding:0 8px 22px var(--row-indent)}
+.work-desc-body p{color:var(--ink-soft);font-size:1rem;line-height:1.55;opacity:0;transform:translateY(-4px);transition:opacity .3s var(--ease) .04s,transform .3s var(--ease) .04s}
+.work-desc.open .work-desc-body p{opacity:1;transform:none}
+.work-store{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-weight:600;font-size:.92rem;color:var(--ink);border-bottom:2px solid var(--riot);padding-bottom:2px;opacity:0;transition:opacity .3s var(--ease) .12s,color .2s}
+.work-desc.open .work-store{opacity:1}
+.work-store span{transition:transform .25s var(--ease)}
+@media(hover:hover){.work-store:hover{color:var(--riot)}.work-store:hover span{transform:translate(3px,-3px)}}
+
+@media(min-width:512px){
+  .work-main{grid-template-columns:30px 56px 1fr auto;gap:18px}
+  .work-row .ic{width:56px;height:56px}
+  .work-row .cat{display:inline-block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:100px;white-space:nowrap;font-weight:600}
+}
+
+/* ---- FOOTER ---- */
+.lt-foot{margin-top:clamp(34px,8vw,50px);text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:16px 26px;border-radius:100px;font-weight:600;font-size:1rem;background:var(--ink);color:var(--paper);transition:background .25s var(--ease),transform .2s var(--ease)}
+.btn:active{transform:scale(.985)}
+@media(hover:hover){.btn:hover{background:var(--riot)}}
+.lt-social{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 24px;margin-top:22px;font-weight:500;font-size:.95rem}
+.lt-social a{color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:1px;transition:color .2s,border-color .2s}
+@media(hover:hover){.lt-social a:hover{color:var(--riot);border-color:var(--riot)}}
+.lt-legal{margin-top:22px;color:var(--muted);font-size:.8rem;line-height:1.5}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js [data-reveal]{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#apps">Skip to apps</a>
+
+<main class="lt">
+  <!-- IDENTITY -->
+  <header class="lt-head" data-reveal>
+    <p class="eyebrow">An app studio</p>
+    <a class="wordmark" href="https://playriot.co" aria-label="PLAYRIOT — visit the full site">PLAY<span>RIOT</span><i class="dot" aria-hidden="true"></i></a>
+    <h1 class="lt-tag">Sharp apps that each kill <span class="hl">one annoying problem</span>.</h1>
+    <p class="lt-sub">Built fast, with AI, by a 20-year Navy veteran who’d rather finish than pitch.</p>
+    <span class="lt-chip"><i class="live" aria-hidden="true"></i><span data-count>11</span>&nbsp;live on the App Store</span>
+  </header>
+
+  <!-- THE WORK -->
+  <section class="apps" id="apps">
+    <div class="section-head" data-reveal>
+      <h2>The work</h2>
+      <p>Each app earns its place by removing one specific, nameable friction. Tap any to open it on the App Store — or expand a row to read more.</p>
+    </div>
+    <!-- Rows are static (robust in social in-app webviews, no layout shift) and mirror the
+         APPS catalog in script.js. If that catalog changes, regenerate these rows to match. -->
+    <ol class="work-index" id="work-list">
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6759892984" target="_blank" rel="noopener" aria-label="Expendy — Track expenses by talking — not typing. (opens App Store)">
+            <span class="num">01</span>
+            <img class="ic" src="assets/icons/expendy.png" alt="Expendy app icon" width="56" height="56" decoding="async" loading="eager" fetchpriority="high" />
+            <span class="meta">
+              <span class="name">Expendy</span>
+              <span class="prob">Track expenses by talking — not typing.</span>
+            </span>
+            <span class="cat">Money</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-expendy" aria-label="More about Expendy"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-expendy">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Tap the mic and say “twelve dollars at Starbucks” — Expendy’s AI categorizes it instantly, no typing. It’s also a full budget planner and subscription catcher, Siri-ready, with CSV export when you need the receipts.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6759892984" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6768893413" target="_blank" rel="noopener" aria-label="AvaNotes — Just talk — Ava turns it into notes and to-dos. (opens App Store)">
+            <span class="num">02</span>
+            <img class="ic" src="assets/icons/avanotes.png" alt="AvaNotes app icon" width="56" height="56" decoding="async" loading="eager" fetchpriority="high" />
+            <span class="meta">
+              <span class="name">AvaNotes</span>
+              <span class="prob">Just talk — Ava turns it into notes and to-dos.</span>
+            </span>
+            <span class="cat">Voice notes</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-avanotes" aria-label="More about AvaNotes"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-avanotes">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Press the button and talk — Ava transcribes in 100+ languages, summarizes, and pulls every to-do, meeting, and follow-up out of what you said. One tap sends them to Reminders, Calendar, or a draft email. No meeting bots, no screen recording.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6768893413" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6764470469" target="_blank" rel="noopener" aria-label="DealShield — Catches the hidden fees before you sign. (opens App Store)">
+            <span class="num">03</span>
+            <img class="ic" src="assets/icons/dealshield.png" alt="DealShield app icon" width="56" height="56" decoding="async" loading="eager" fetchpriority="high" />
+            <span class="meta">
+              <span class="name">DealShield</span>
+              <span class="prob">Catches the hidden fees before you sign.</span>
+            </span>
+            <span class="cat">Car buying</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-dealshield" aria-label="More about DealShield"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-dealshield">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Point your camera at the dealer’s finance worksheet and the AI flags every junk add-on, markup, and packed-payment line. It scores any offer 0–100 against the real market and gives you the true out-the-door price — before you sign.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6764470469" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6759699590" target="_blank" rel="noopener" aria-label="NutriLish — Snap a photo of your plate, get the calories. (opens App Store)">
+            <span class="num">04</span>
+            <img class="ic" src="assets/icons/nutrilish.png" alt="NutriLish app icon" width="56" height="56" decoding="async" loading="eager" fetchpriority="high" />
+            <span class="meta">
+              <span class="name">NutriLish</span>
+              <span class="prob">Snap a photo of your plate, get the calories.</span>
+            </span>
+            <span class="cat">Nutrition</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-nutrilish" aria-label="More about NutriLish"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-nutrilish">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Photograph any meal and AI names each item with calories and full macros — no manual logging. Scan barcodes for packaged foods, then watch your daily, weekly, and monthly trends on one dashboard.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6759699590" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6773144612" target="_blank" rel="noopener" aria-label="Pinwell — Track every GLP-1, peptide, and TRT dose. (opens App Store)">
+            <span class="num">05</span>
+            <img class="ic" src="assets/icons/pinwell.png" alt="Pinwell app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">Pinwell</span>
+              <span class="prob">Track every GLP-1, peptide, and TRT dose.</span>
+            </span>
+            <span class="cat">Health</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-pinwell" aria-label="More about Pinwell"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-pinwell">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>A real medication logbook for GLP-1, peptides, and TRT — semaglutide, tirzepatide, BPC-157, testosterone, and more. Pin a dose in three taps, see your level on a pharmacokinetic chart built from FDA-label half-life math, and rotate injection sites on a body diagram. No paywall, ever.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6773144612" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6759682169" target="_blank" rel="noopener" aria-label="MuscleFuel AI — Hit your daily protein without the math. (opens App Store)">
+            <span class="num">06</span>
+            <img class="ic" src="assets/icons/musclefuel.png" alt="MuscleFuel AI app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">MuscleFuel AI</span>
+              <span class="prob">Hit your daily protein without the math.</span>
+            </span>
+            <span class="cat">Fitness</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-musclefuel" aria-label="More about MuscleFuel AI"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-musclefuel">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>It sets your daily protein target from your weight, gender, and training, then makes hitting it effortless. Voice-log meals like “two eggs, chicken breast,” snap your plate for an AI estimate, and keep the streak alive — no spreadsheets.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6759682169" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6759505734" target="_blank" rel="noopener" aria-label="RegretIt — Logs your impulse buys. Then roasts you for them. (opens App Store)">
+            <span class="num">07</span>
+            <img class="ic" src="assets/icons/regretit.png" alt="RegretIt app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">RegretIt</span>
+              <span class="prob">Logs your impulse buys. Then roasts you for them.</span>
+            </span>
+            <span class="cat">Money</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-regretit" aria-label="More about RegretIt"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-regretit">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Log your worst impulse buys, rate the regret, and watch your Total Damage climb. Every purchase earns a unique AI-generated roast based on what you bought and how much you blew — financial accountability, with jokes.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6759505734" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6760954453" target="_blank" rel="noopener" aria-label="Material Calc Pro — Exact materials for every job — no guesswork. (opens App Store)">
+            <span class="num">08</span>
+            <img class="ic" src="assets/icons/materialcalc.png" alt="Material Calc Pro app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">Material Calc Pro</span>
+              <span class="prob">Exact materials for every job — no guesswork.</span>
+            </span>
+            <span class="cat">Trades</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-materialcalc" aria-label="More about Material Calc Pro"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-materialcalc">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Enter your dimensions and it tells you exactly how much to buy — tile, paint, concrete, drywall, decking, fencing, mulch, wallpaper — in seconds, waste buffer included. Measure twice, buy once, skip the second trip to the store.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6760954453" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6768459507" target="_blank" rel="noopener" aria-label="HVAC Pro Calculator — Field math for HVAC techs — BTU, duct, voltage. (opens App Store)">
+            <span class="num">09</span>
+            <img class="ic" src="assets/icons/hvac.png" alt="HVAC Pro Calculator app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">HVAC Pro Calculator</span>
+              <span class="prob">Field math for HVAC techs — BTU, duct, voltage.</span>
+            </span>
+            <span class="cat">Trades</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-hvac" aria-label="More about HVAC Pro Calculator"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-hvac">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>BTU load sizing, Manual-D duct calc, NEC voltage drop, refrigerant P-T charts, superheat and subcooling — the field tools HVAC techs and electricians actually use. Every formula is cited (ASHRAE, NEC, SMACNA). No ads, no tracking.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6768459507" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6769180864" target="_blank" rel="noopener" aria-label="CoverShift — Swap and cover shifts — without the group texts. (opens App Store)">
+            <span class="num">10</span>
+            <img class="ic" src="assets/icons/covershift.png" alt="CoverShift app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">CoverShift</span>
+              <span class="prob">Swap and cover shifts — without the group texts.</span>
+            </span>
+            <span class="cat">Shift work</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-covershift" aria-label="More about CoverShift"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-covershift">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Post a shift you can’t cover and your manager and teammates are notified instantly — coworkers claim it from the open-shift board, the manager approves with one tap. Schedule, swap, pick up hours, request time off, and clock in, all in one place.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6769180864" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="work-item" data-reveal>
+        <div class="work-row">
+          <a class="work-main" href="https://apps.apple.com/us/app/id6766379479" target="_blank" rel="noopener" aria-label="Crew: Night Out — Keeps the whole group together — and home safe. (opens App Store)">
+            <span class="num">11</span>
+            <img class="ic" src="assets/icons/crew.png" alt="Crew: Night Out app icon" width="56" height="56" decoding="async" loading="lazy" />
+            <span class="meta">
+              <span class="name">Crew: Night Out</span>
+              <span class="prob">Keeps the whole group together — and home safe.</span>
+            </span>
+            <span class="cat">Social</span>
+          </a>
+          <button class="work-toggle" type="button" aria-expanded="false" aria-controls="desc-crew" aria-label="More about Crew: Night Out"><svg class="chev" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="work-desc" id="desc-crew">
+          <div class="work-desc-in">
+            <div class="work-desc-body">
+              <p>Spin a fair, weighted wheel to settle the designated driver, the bar crawl, and who buys the round — in about ten seconds. A live dashboard keeps the crew together all night, and everyone wakes up to a recap. Get home safe.</p>
+              <a class="work-store" href="https://apps.apple.com/us/app/id6766379479" target="_blank" rel="noopener">View on the App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="lt-foot">
+    <a class="btn" data-reveal href="https://apps.apple.com/us/developer/playriot-llc/id1875195414" target="_blank" rel="noopener">Browse all on the App Store →</a>
+    <nav class="lt-social" data-reveal aria-label="Elsewhere">
+      <a href="https://apps.apple.com/us/developer/playriot-llc/id1875195414" target="_blank" rel="noopener">App Store</a>
+      <a href="https://playriot.co" target="_blank" rel="noopener">playriot.co</a>
+      <a href="https://www.linkedin.com/in/desmondb/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/CEOMrDB" target="_blank" rel="noopener">X</a>
+    </nav>
+    <p class="lt-legal">© <span id="yr">2026</span> PLAYRIOT LLC · San Diego, California</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  document.documentElement.classList.add("js");
+
+  // Expand / collapse — the toggle is a sibling of the App Store link, so it never navigates.
+  var list = document.getElementById("work-list");
+  if (list) list.addEventListener("click", function(e){
+    var btn = e.target.closest(".work-toggle");
+    if (!btn) return;
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    var open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!open));
+    if (panel) panel.classList.toggle("open", !open);
+  });
+
+  // Live count stays honest if the catalog ever changes.
+  var n = document.querySelectorAll(".work-item").length;
+  document.querySelectorAll("[data-count]").forEach(function(el){ el.textContent = String(n); });
+
+  var yr = document.getElementById("yr");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  // Reveal on scroll (content is already visible without JS; this only adds entrance motion).
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>
