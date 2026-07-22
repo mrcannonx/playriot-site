@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Does your car have a KARR alarm? How to check — and patch the Bluetooth flaw | PLAYRIOT</title>
+<meta name="description" content="A dealer-installed KARR / SWDS car alarm with a Bluetooth security flaw is in an estimated 2 million+ US cars — many owners never asked for it. Here's how to check your car in 60 seconds and patch it free in about 2 minutes." />
+<meta name="keywords" content="KARR alarm, KARR sticker, KARR blinking light, SWDS car alarm, dealer installed car alarm, KARR Bluetooth vulnerability, how to check KARR alarm, how to patch KARR alarm, KARR security app, Acrisure Protection Group" />
+<link rel="canonical" href="https://playriot.co/karr/" />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="Does your car have a KARR alarm? How to check — and patch the Bluetooth flaw" />
+<meta property="og:description" content="A hidden dealer-installed alarm with a Bluetooth flaw is in 2 million+ US cars. Check yours in 60 seconds — and fix it free." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://playriot.co/karr/" />
+<meta property="og:image" content="https://playriot.co/assets/og.png?v=2" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Does your car have a KARR alarm? How to check — and patch the Bluetooth flaw" />
+<meta name="twitter:description" content="A hidden dealer-installed alarm with a Bluetooth flaw is in 2 million+ US cars. Check yours in 60 seconds — and fix it free." />
+<meta name="twitter:image" content="https://playriot.co/assets/og.png?v=2" />
+<meta name="theme-color" content="#14131A" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css?v=2" />
+<style>
+/* ============ KARR public-safety guide — namespaced .k- ============ */
+.k-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.k-narrow{max-width:760px}
+
+/* nav label */
+.k-navtag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  border:1px solid var(--line);padding:6px 12px;border-radius:100px;white-space:nowrap}
+
+/* hero */
+.k-hero{max-width:var(--maxw);margin:0 auto;padding:clamp(44px,8vw,92px) clamp(20px,5vw,56px) clamp(30px,5vw,56px)}
+.k-hero .eyebrow{display:inline-flex;align-items:center;gap:9px}
+.k-hero .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--riot);
+  box-shadow:0 0 0 0 rgba(255,74,28,.5);animation:kpulse 2s var(--ease) infinite}
+.k-hero h1{font-size:clamp(2.3rem,6.2vw,4.6rem);margin:4px 0 24px;max-width:15ch}
+.k-hero h1 .hl{color:var(--riot);position:relative;white-space:nowrap}
+.k-hero h1 .hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.10em;background:var(--riot);opacity:.28;border-radius:2px}
+.k-lede{font-size:clamp(1.08rem,2vw,1.4rem);color:var(--ink-soft);max-width:660px;line-height:1.5}
+.k-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.k-micro{margin-top:22px;font-size:.86rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+.k-micro b{color:var(--ink-soft);font-weight:600}
+
+/* section rhythm */
+.k-sec{padding:clamp(40px,6vw,72px) 0}
+.k-sec.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.k-kicker{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--riot-deep);font-weight:600;margin-bottom:14px}
+.k-h2{font-size:clamp(1.7rem,4.2vw,2.9rem);letter-spacing:-.02em;line-height:1.04;font-family:"Clash Display",sans-serif;font-weight:700}
+.k-sec p.k-body{color:var(--ink-soft);font-size:clamp(1.02rem,1.6vw,1.16rem);line-height:1.6;max-width:680px;margin-top:16px}
+.k-sec p.k-body + p.k-body{margin-top:14px}
+
+/* the 3-sign check */
+.k-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,22px);margin-top:30px}
+.k-check{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,2.6vw,28px);
+  display:flex;flex-direction:column;gap:14px;transition:.3s var(--ease)}
+.k-check:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 34px rgba(20,19,26,.09)}
+.k-check .k-vis{height:88px;display:grid;place-items:center;background:var(--ink);border-radius:10px;overflow:hidden}
+.k-check h3{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.18rem;letter-spacing:-.01em}
+.k-check p{color:var(--ink-soft);font-size:.98rem;line-height:1.45}
+.k-check .k-tag{margin-top:auto;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* stylized diagrams (honest — not photos) */
+.k-sticker{font-family:"Clash Display",sans-serif;font-weight:700;letter-spacing:.06em;color:var(--paper);
+  border:2px solid var(--riot);border-radius:6px;padding:7px 16px;font-size:1.5rem;background:rgba(255,74,28,.10)}
+.k-sticker.small{font-size:1rem;letter-spacing:.14em;color:var(--muted-d);border-color:var(--muted-d);background:none}
+.k-dash{position:relative;width:118px;height:56px}
+.k-dash .k-bar{position:absolute;inset:auto 0 0 0;height:22px;background:var(--ink-2);border:1px solid var(--ink-soft);border-radius:8px 8px 0 0}
+.k-led{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:12px;height:12px;border-radius:50%;
+  background:var(--riot);box-shadow:0 0 12px 2px rgba(255,74,28,.7);animation:kpulse 1.4s var(--ease) infinite}
+@keyframes kpulse{0%{box-shadow:0 0 0 0 rgba(255,74,28,.55)}70%{box-shadow:0 0 0 12px rgba(255,74,28,0)}100%{box-shadow:0 0 0 0 rgba(255,74,28,0)}}
+
+/* fix — dark, prominent */
+.k-fix{background:var(--ink);color:var(--paper)}
+.k-fix .k-kicker{color:var(--riot)}
+.k-fix .k-h2{color:var(--paper)}
+.k-fix .k-lead{color:#D9D4C7;font-size:clamp(1.02rem,1.6vw,1.18rem);line-height:1.6;max-width:640px;margin-top:16px}
+.k-steps{list-style:none;counter-reset:step;margin:34px 0 0;display:grid;gap:14px;max-width:760px}
+.k-steps li{counter-increment:step;background:var(--ink-2);border:1px solid var(--ink-soft);border-radius:var(--r);
+  padding:20px 22px 20px 68px;position:relative}
+.k-steps li::before{content:counter(step);position:absolute;left:18px;top:18px;width:34px;height:34px;border-radius:50%;
+  background:var(--riot);color:var(--ink);font-family:"Clash Display",sans-serif;font-weight:700;display:grid;place-items:center;font-size:1.05rem}
+.k-steps h4{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.12rem;color:var(--paper);margin-bottom:4px}
+.k-steps p{color:#C9C4B7;font-size:.99rem;line-height:1.5}
+.k-steps code{background:rgba(255,74,28,.16);color:#FFD9CD;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.9em;padding:1px 7px;border-radius:5px;font-weight:600}
+.k-fixnote{margin-top:26px;padding:18px 20px;border-left:3px solid var(--riot);background:rgba(255,74,28,.07);
+  border-radius:0 10px 10px 0;color:#D9D4C7;font-size:.98rem;line-height:1.55;max-width:720px}
+.k-fixnote b{color:var(--paper)}
+.k-fix .k-actions{margin-top:30px}
+.k-btn-store{background:var(--riot);color:var(--ink)}
+.k-btn-store:hover{background:var(--paper);transform:translateY(-2px)}
+.k-btn-line{border:1.5px solid var(--ink-soft);color:var(--paper)}
+.k-btn-line:hover{border-color:var(--paper);transform:translateY(-2px)}
+
+/* two-up risk framing */
+.k-two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6vw,24px);margin-top:30px}
+.k-card{border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,2.8vw,30px);background:var(--paper)}
+.k-card .k-lbl{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.k-card.res .k-lbl{color:var(--riot-deep)}
+.k-card.ven .k-lbl{color:var(--muted)}
+.k-card p{color:var(--ink-soft);font-size:1rem;line-height:1.55}
+.k-card .k-src{margin-top:14px;font-size:.82rem;color:var(--muted)}
+
+/* faq */
+.k-faq{margin-top:26px;border-top:1px solid var(--line)}
+.k-faq details{border-bottom:1px solid var(--line)}
+.k-faq summary{list-style:none;cursor:pointer;padding:20px 44px 20px 2px;position:relative;
+  font-family:"Clash Display",sans-serif;font-weight:600;font-size:clamp(1.05rem,2vw,1.28rem);letter-spacing:-.01em;transition:color .2s}
+.k-faq summary::-webkit-details-marker{display:none}
+.k-faq summary:hover{color:var(--riot)}
+.k-faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--riot);font-weight:400;transition:transform .3s var(--ease)}
+.k-faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.k-faq .k-ans{padding:0 6px 22px 2px;color:var(--ink-soft);font-size:1.04rem;line-height:1.6;max-width:720px}
+.k-faq .k-ans a{color:var(--riot-deep);text-decoration:underline;text-underline-offset:2px;font-weight:500}
+
+/* sources / disclaimer */
+.k-sources{padding:clamp(40px,6vw,64px) 0}
+.k-sources ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.k-sources li{color:var(--ink-soft);font-size:.98rem}
+.k-sources a{color:var(--riot-deep);text-decoration:underline;text-underline-offset:2px}
+.k-disc{margin-top:26px;padding:18px 20px;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  color:var(--muted);font-size:.86rem;line-height:1.55;max-width:820px}
+
+@media(max-width:760px){
+  .k-checks{grid-template-columns:1fr}
+  .k-two{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .k-led,.k-hero .eyebrow::before{animation:none!important}
+}
+</style>
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"HowTo",
+      "name":"How to check for and patch the KARR car-alarm Bluetooth flaw",
+      "description":"Check whether your car has a dealer-installed KARR / SWDS alarm and apply the free firmware security update.",
+      "totalTime":"PT2M",
+      "estimatedCost":{"@type":"MonetaryAmount","currency":"USD","value":"0"},
+      "step":[
+        {"@type":"HowToStep","name":"Check your car","text":"Look for a KARR window sticker, an SWDS sticker, or a small button with a blinking light under the dashboard near the steering column."},
+        {"@type":"HowToStep","name":"Download the free KARR Security app","text":"Get the free KARR Security app from the Apple App Store or Google Play. No account or subscription is needed to run the update."},
+        {"@type":"HowToStep","name":"Open Customer Service and run the firmware update","text":"In the app, tap Customer Service, then Firmware Update, and follow the prompts with Bluetooth on and your phone near the car."},
+        {"@type":"HowToStep","name":"Confirm it finished","text":"Wait for the app to report the firmware update as complete. If you cannot complete it, contact the selling dealership or KARR customer support at KARRsecurity.com."}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"I told the dealer I didn't want the alarm. Am I still affected?","acceptedAnswer":{"@type":"Answer","text":"Possibly yes. UC San Diego found the device is often left installed and still operating even after a buyer declines it, and even after it is deactivated. Running the free firmware update is the way to be sure it cannot be exploited."}},
+        {"@type":"Question","name":"Is my make and model affected?","acceptedAnswer":{"@type":"Answer","text":"It is not tied to a specific automaker — it is added by the dealer, so it spans many brands. Affected cars were largely sold through dealers in Southern California from 2017 onward and then resold across the country. The three signs — a KARR window sticker, an SWDS sticker, or a small blinking light under the dashboard — are the reliable way to tell."}},
+        {"@type":"Question","name":"Do I have to pay anything?","acceptedAnswer":{"@type":"Answer","text":"No. The KARR Security app and the firmware update are free. You do not need a paid plan or subscription to patch the flaw."}},
+        {"@type":"Question","name":"Who discovered this?","acceptedAnswer":{"@type":"Answer","text":"Security researchers at UC San Diego, in work titled BLE Theft Auto, presented in 2026. They reported it to the vendor before it was made public, and a fix followed."}},
+        {"@type":"Question","name":"Who made this page — are you KARR?","acceptedAnswer":{"@type":"Answer","text":"No. This is an independent, free public-safety summary made by PLAYRIOT, a small San Diego app studio. It is not affiliated with KARR, Acrisure Protection Group, SouthWest Dealer Services, or UC San Diego."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#fix">Skip to the fix</a>
+
+<!-- NAV -->
+<header class="nav" id="top">
+  <a class="wordmark" href="https://playriot.co" aria-label="PLAYRIOT home">PLAY<span>RIOT</span><i class="dot" aria-hidden="true"></i></a>
+  <nav class="nav-links" aria-label="Primary">
+    <span class="k-navtag">Free public-safety guide</span>
+    <a class="nav-cta" href="#fix">Fix it now →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="k-hero">
+  <p class="eyebrow" data-reveal>Updated July 2026 · Free · No sign-up</p>
+  <h1 data-reveal>Is a hidden alarm putting <span class="hl">your car at risk?</span></h1>
+  <p class="k-lede" data-reveal>
+    Security researchers at UC San Diego found a Bluetooth flaw in a dealer-installed car alarm called
+    <strong>KARR</strong> — and it's in an estimated <strong>2 million-plus US cars</strong>. Many owners never asked
+    for it and don't know it's there. The good news: checking takes about a minute, and the fix is free.
+  </p>
+  <div class="k-actions" data-reveal>
+    <a class="btn btn-primary" href="#check">Check my car (60 sec)</a>
+    <a class="btn btn-ghost" href="#fix">Skip to the free fix</a>
+  </div>
+  <p class="k-micro" data-reveal>
+    <span><b>What it is:</b> a KARR / SWDS dealer alarm</span>
+    <span><b>Who's affected:</b> cars sold at many US dealers since 2017</span>
+    <span><b>Cost to fix:</b> $0</span>
+  </p>
+</section>
+
+<!-- THE 60-SECOND CHECK -->
+<section class="k-sec alt" id="check">
+  <div class="k-wrap">
+    <p class="k-kicker" data-reveal>Step 1 — Check in 60 seconds</p>
+    <h2 class="k-h2" data-reveal>Three signs your car has it</h2>
+    <p class="k-body" data-reveal>You don't need any app or tool to check. Look for any one of these — most affected cars show the sticker and the blinking light.</p>
+    <div class="k-checks">
+      <div class="k-check" data-reveal>
+        <div class="k-vis" aria-hidden="true"><span class="k-sticker">KARR</span></div>
+        <h3>A "KARR" window sticker</h3>
+        <p>Usually on the driver's-side window or windshield corner. The brand name is printed plainly.</p>
+        <span class="k-tag">On the glass</span>
+      </div>
+      <div class="k-check" data-reveal>
+        <div class="k-vis" aria-hidden="true"><span class="k-sticker small">SWDS</span></div>
+        <h3>An "SWDS" sticker</h3>
+        <p>Stands for SouthWest Dealer Services — the installer. Often appears alongside or instead of the KARR sticker.</p>
+        <span class="k-tag">On the glass</span>
+      </div>
+      <div class="k-check" data-reveal>
+        <div class="k-vis" aria-hidden="true"><span class="k-dash"><span class="k-bar"></span><span class="k-led"></span></span></div>
+        <h3>A small blinking light</h3>
+        <p>A little button or box with a blinking LED tucked under the dashboard, near the steering column.</p>
+        <span class="k-tag">Under the dash</span>
+      </div>
+    </div>
+    <p class="k-body" data-reveal>No sticker but unsure? Check your original dealer paperwork for "KARR," "SWDS," or an alarm/anti-theft add-on — or just run the fix below anyway; it's free and harmless if your car doesn't have the device.</p>
+  </div>
+</section>
+
+<!-- WHAT IS IT -->
+<section class="k-sec" id="what">
+  <div class="k-wrap k-narrow">
+    <p class="k-kicker" data-reveal>What it is</p>
+    <h2 class="k-h2" data-reveal>A car alarm you may never have asked for</h2>
+    <p class="k-body" data-reveal>
+      KARR (also sold as "KARR BT") is an aftermarket alarm and engine immobilizer that some dealerships install
+      before a car is sold — often pitched as a paid add-on during price negotiation. According to UC San Diego,
+      the device is frequently left wired into the car <strong>even when the buyer declines it</strong>, and it can
+      keep operating quietly in the background.
+    </p>
+    <p class="k-body" data-reveal>
+      Researchers estimate it's in more than <strong>2 million vehicles</strong> across the US — many originally sold
+      at dealers in Southern California from 2017 onward, then resold nationwide. It shows up across brands, because
+      it's added by the dealer, not the automaker.
+    </p>
+    <p class="k-body" data-reveal>
+      The problem: the UCSD team found that every one of these alarms is protected by the <strong>same shared digital
+      key</strong> — the researchers compared it to setting every device's password to "1234." That key can't easily
+      be changed, so anyone who has it could reach any car that still has an unpatched device.
+    </p>
+  </div>
+</section>
+
+<!-- RISK — balanced -->
+<section class="k-sec alt" id="risk">
+  <div class="k-wrap">
+    <p class="k-kicker" data-reveal>What's the actual risk?</p>
+    <h2 class="k-h2" data-reveal>We'll let both sides speak</h2>
+    <p class="k-body" data-reveal>Here's the honest picture from the two parties closest to it. You can decide how much it matters for you — patching costs nothing either way.</p>
+    <div class="k-two">
+      <div class="k-card res" data-reveal>
+        <div class="k-lbl">The researchers (UC San Diego)</div>
+        <p>Someone within Bluetooth range (roughly a few yards) of an unpatched car could unlock the doors, set off the
+          horn and lights, or immobilize the engine so it won't start. Because the same key works on every device, a
+          whole parking lot could be affected. One lead researcher called it, in terms of severity, "probably the worst"
+          car-hacking issue he's seen — largely because owners often don't know the device is even there.</p>
+        <p class="k-src">Source: UC San Diego, "BLE Theft Auto" research (2026)</p>
+      </div>
+      <div class="k-card ven" data-reveal>
+        <div class="k-lbl">The vendor (Acrisure Protection Group)</div>
+        <p>The company that sells KARR says the technique described in the research is highly complex and presents a
+          low risk to customers under real-world conditions. It says it responded by developing a firmware update that
+          closes the issue, now available to install through its app.</p>
+        <p class="k-src">Source: Acrisure Protection Group statement (2026)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FIX -->
+<section class="k-sec k-fix" id="fix">
+  <div class="k-wrap">
+    <p class="k-kicker" data-reveal>Step 2 — The fix (free, ~2 minutes)</p>
+    <h2 class="k-h2" data-reveal>Patch it yourself from your phone</h2>
+    <p class="k-lead" data-reveal>
+      There's no automatic update — every car has to be patched by hand. Even if you declined the alarm or never knew
+      you had it, this is how you close the flaw. It's free.
+    </p>
+    <ol class="k-steps">
+      <li data-reveal>
+        <h4>Download the free KARR Security app</h4>
+        <p>Get "<strong>KARR Security</strong>" from the Apple App Store or Google Play. The app is free — you don't need an account or a subscription to run the update.</p>
+      </li>
+      <li data-reveal>
+        <h4>Open it and go to Customer Service</h4>
+        <p>Inside the app, tap <code>Customer Service</code>, then <code>Firmware Update</code>. Follow the prompts and keep Bluetooth on with your phone near the car.</p>
+      </li>
+      <li data-reveal>
+        <h4>Confirm the update finished</h4>
+        <p>Wait for the app to report the firmware update as complete. If you already use the app, look for an update notification and confirm it installed.</p>
+      </li>
+      <li data-reveal>
+        <h4>Can't find it, or unsure it's your app?</h4>
+        <p>If you can't locate the device or complete the update, contact the dealership that sold you the car, or KARR customer support at <strong>KARRsecurity.com</strong>.</p>
+      </li>
+    </ol>
+    <p class="k-fixnote" data-reveal>
+      <b>Heads-up:</b> the fix only protects the car it's run on, and there's no push-update — so if you have more than
+      one affected vehicle, run it on each. The firmware patch was released <b>July 20, 2026</b>.
+    </p>
+    <div class="k-actions" data-reveal>
+      <a class="btn k-btn-store" href="https://apps.apple.com/us/app/karr-security/id6443616063" target="_blank" rel="noopener nofollow">Get the KARR Security app (App Store) →</a>
+      <a class="btn k-btn-line" href="https://www.karrsecurity.com" target="_blank" rel="noopener nofollow">KARRsecurity.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="k-sec" id="faq">
+  <div class="k-wrap k-narrow">
+    <p class="k-kicker" data-reveal>Common questions</p>
+    <h2 class="k-h2" data-reveal>Good to know</h2>
+    <div class="k-faq" data-reveal>
+      <details>
+        <summary>I told the dealer I didn't want the alarm. Am I still affected?</summary>
+        <div class="k-ans">Possibly yes. UC San Diego found the device is often left installed and still operating even after a buyer declines it, and even after it's "deactivated." Running the free firmware update is the way to be sure it can't be exploited.</div>
+      </details>
+      <details>
+        <summary>Is my make and model affected?</summary>
+        <div class="k-ans">It's not tied to a specific automaker — it's added by the dealer, so it spans many brands. Affected cars were largely sold through dealers in Southern California from 2017 onward and then resold across the country. The three signs above are the reliable way to tell, not the badge on your car.</div>
+      </details>
+      <details>
+        <summary>Do I have to pay anything?</summary>
+        <div class="k-ans">No. The KARR Security app and the firmware update are free. You do not need a paid plan or subscription to patch the flaw. If anything asks you to pay to "remove a vulnerability," be cautious — the official fix is free.</div>
+      </details>
+      <details>
+        <summary>Who discovered this?</summary>
+        <div class="k-ans">Security researchers at UC San Diego, in work titled "BLE Theft Auto," presented in 2026. They reported it to the vendor before it was made public, and a fix followed. See the <a href="https://today.ucsd.edu/story/2-million-cars-with-anti-theft-systems-installed-by-dealers-are-at-higher-risk-of-theft" target="_blank" rel="noopener">UC San Diego announcement</a>.</div>
+      </details>
+      <details>
+        <summary>Who made this page — are you KARR?</summary>
+        <div class="k-ans">No. This is an independent, free public-safety summary made by <a href="https://playriot.co" target="_blank" rel="noopener">PLAYRIOT</a>, a small San Diego app studio. We're not affiliated with KARR, Acrisure Protection Group, SouthWest Dealer Services, or UC San Diego. We made it because the fix has to reach millions of people who may not know they need it. Always confirm details with the official sources below.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES + DISCLAIMER -->
+<section class="k-sources">
+  <div class="k-wrap k-narrow">
+    <p class="k-kicker" data-reveal>Sources</p>
+    <ul data-reveal>
+      <li><a href="https://today.ucsd.edu/story/2-million-cars-with-anti-theft-systems-installed-by-dealers-are-at-higher-risk-of-theft" target="_blank" rel="noopener">UC San Diego — "2 Million Cars with Anti-Theft Systems Installed by Dealers Are at Higher Risk of Theft"</a></li>
+      <li><a href="https://www.karrsecurity.com" target="_blank" rel="noopener nofollow">KARRsecurity.com — official app &amp; firmware-update instructions</a></li>
+    </ul>
+    <p class="k-disc" data-reveal>
+      This page is an independent public-safety summary provided free of charge by PLAYRIOT LLC. It is not affiliated
+      with, endorsed by, or connected to KARR, Acrisure Protection Group, SouthWest Dealer Services, or the University
+      of California, San Diego. "KARR" and other names are trademarks of their respective owners, used here only to
+      describe the product being discussed. Information is summarized from public reporting and may change — always
+      verify with the official sources above, your dealership, or the manufacturer before acting.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-cta" data-reveal>
+    <h2>Made by a studio that kills annoying problems.<br/>This one was worth doing for free.</h2>
+    <a class="btn btn-primary" href="https://playriot.co">See what PLAYRIOT builds →</a>
+  </div>
+  <div class="footer-bottom">
+    <a class="wordmark small" href="https://playriot.co">PLAY<span>RIOT</span><i class="dot"></i></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://playriot.co">Studio</a>
+      <a href="https://apps.apple.com/us/developer/playriot-llc/id1875195414" target="_blank" rel="noopener">App Store</a>
+      <a href="https://x.com/CEOMrDB" target="_blank" rel="noopener">X</a>
+    </nav>
+    <p class="legal">© <span id="yr">2026</span> PLAYRIOT LLC · San Diego, California · A free public-safety guide</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // year
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  // reveal on scroll
+  var els=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
