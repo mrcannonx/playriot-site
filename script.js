@@ -66,6 +66,12 @@ const APPS = [
   { slug:"lumiray",     name:"Lumiray",            cat:"Game",        url:"https://apps.apple.com/us/app/id6785299146",
     prob:"A calm, glowing one-touch deep-sea dive.",
     desc:"Glide through a glowing deep-sea world as Mira, a bioluminescent manta — hold to rise, release to sink, and weave through the dark to light up the water around you. One touch is the whole game, and the deeper you fall, the brighter you glow. No timers, no pressure — just you, the current, and the light." },
+  { slug:"ember",       name:"Ember",              cat:"Quit drinking",url:"https://apps.apple.com/us/app/id6790585544",
+    prob:"A companion for the 2am craving — not another day counter.",
+    desc:"Your sober time is a single flame you tend. It breathes while you’re lit, dims to a coal when a craving hits, and relights the moment you get through it. Tap “I’m having an urge” any hour of the night and Ember sits with you — a short, grounded conversation plus one coping tool that fits the moment." },
+  { slug:"northpup",    name:"Northpup",           cat:"New puppy",   url:"https://apps.apple.com/us/app/id6792331705",
+    prob:"The one right thing to do with your puppy today.",
+    desc:"Bringing home a puppy is joyful and overwhelming at once. Northpup maps the whole first year — a daily plan keyed to your pup’s breed, size, and exact age, plus a potty and vaccine schedule that never slips. One tap logs every trip outside, and growth charts show they’re coming along on track." },
 ];
 
 const el = (tag, cls, text) => {
