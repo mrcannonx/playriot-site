@@ -72,6 +72,9 @@ const APPS = [
   { slug:"northpup",    name:"Northpup",           cat:"New puppy",   url:"https://apps.apple.com/us/app/id6792331705",
     prob:"The one right thing to do with your puppy today.",
     desc:"Bringing home a puppy is joyful and overwhelming at once. Northpup maps the whole first year — a daily plan keyed to your pup’s breed, size, and exact age, plus a potty and vaccine schedule that never slips. One tap logs every trip outside, and growth charts show they’re coming along on track." },
+  { slug:"emerit",      name:"Emerit",             cat:"VA benefits", url:"https://apps.apple.com/us/app/id6795649491",
+    prob:"The VA pay you’re already owed and never knew to ask for.",
+    desc:"Special Monthly Compensation is a separate pay system that sits on top of your combined rating, and most veterans have never heard of it. Emerit asks plain questions about your day, then shows which levels you look eligible for and what each one pays at the current rate. It works back pay out month by month if your effective date should have been earlier, and flags which of your ratings can no longer be cut — every answer tied to the federal rule it came from." },
 ];
 
 const el = (tag, cls, text) => {

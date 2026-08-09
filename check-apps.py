@@ -122,6 +122,30 @@ def main():
                         f"{name}: meta says \"{bad}\" but {n} are live "
                         f"(should be \"{word}\") -- {s[:60]}...")
 
+    # 2b. the SAME claims sitting in visible body copy, which check 2 cannot see.
+    #     Check 2 only reads content="..." attributes. On 2026-08-09 index.html
+    #     had "Twenty-four live on the App Store today" in a plain paragraph --
+    #     read by every human visitor, invisible to this guard -- while all four
+    #     meta tags were being policed correctly. Strip <script>/<style> first,
+    #     or CSS and SVG values (24px, viewBox="0 0 24 24") fire as false hits.
+    def visible_text(html):
+        s = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", html)
+        s = re.sub(r"(?s)<[^>]+>", " ", s)
+        return re.sub(r"\s+", " ", s)
+
+    for name, html in [("index.html", index_html),
+                       ("mobile.html", texts["mobile.html"])]:
+        vis = visible_text(html)
+        for bad in stale_digits:
+            if re.search(rf"\b{bad} (?:sharp )?(?:iOS )?apps\b", vis):
+                problems.append(
+                    f"{name}: BODY COPY says \"{bad} apps\" but {n} are live")
+        for bad in stale_words:
+            if re.search(rf"\b{re.escape(bad)}\b(?!-) live on the App Store", vis):
+                problems.append(
+                    f"{name}: BODY COPY says \"{bad} live on the App Store\" "
+                    f"but {n} are live (should be \"{word}\")")
+
     # 3. no-JS fallback text inside the runtime-derived counters.
     #    JS overwrites these, so they are right for humans and STALE for any
     #    crawler that does not run scripts -- and nothing else notices.
