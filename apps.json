@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "expendy",
+    "name": "Expendy: Voice Expense Tracker",
+    "id": 6759892984,
+    "genre": "Finance",
+    "url": "https://apps.apple.com/us/app/expendy-voice-expense-tracker/id6759892984?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "dealshield",
+    "name": "DealShield: Car Deal Analyzer",
+    "id": 6764470469,
+    "genre": "Finance",
+    "url": "https://apps.apple.com/us/app/dealshield-car-deal-analyzer/id6764470469?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "materialcalc",
+    "name": "Material Calculator Pro",
+    "id": 6760954453,
+    "genre": "Utilities",
+    "url": "https://apps.apple.com/us/app/material-calculator-pro/id6760954453?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "musclefuel",
+    "name": "MuscleFuel AI",
+    "id": 6759682169,
+    "genre": "Health & Fitness",
+    "url": "https://apps.apple.com/us/app/musclefuel-ai/id6759682169?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "nutrilish",
+    "name": "NutriLish: AI Calorie Counter",
+    "id": 6759699590,
+    "genre": "Health & Fitness",
+    "url": "https://apps.apple.com/us/app/nutrilish-ai-calorie-counter/id6759699590?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "regretit",
+    "name": "RegretIt",
+    "id": 6759505734,
+    "genre": "Finance",
+    "url": "https://apps.apple.com/us/app/regretit/id6759505734?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "crew",
+    "name": "Crew: Night Out",
+    "id": 6766379479,
+    "genre": "Social Networking",
+    "url": "https://apps.apple.com/us/app/crew-night-out/id6766379479?pt=127481835&ct=playriot&mt=8"
+  },
+  {
+    "slug": "hvac",
+    "name": "HVAC Pro Calculator: NEC + P-T",
+    "id": 6768459507,
+    "genre": "Utilities",
+    "url": "https://apps.apple.com/us/app/hvac-pro-calculator-nec-p-t/id6768459507?pt=127481835&ct=playriot&mt=8"
+  }
+]
