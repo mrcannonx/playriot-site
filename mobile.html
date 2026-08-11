@@ -70,7 +70,9 @@ img{display:block}
 
 /* ---- VOTE ROW (Build Board) ---- */
 .lt-vote{display:flex;align-items:center;justify-content:space-between;gap:16px;
-  margin-top:26px;padding:18px 20px;border-radius:18px;text-decoration:none;
+  /* The bottom gap matches the header's rhythm below and clears the card's own
+     drop shadow — without it "The work" sits almost against the card. */
+  margin:26px 0 clamp(34px,8vw,48px);padding:18px 20px;border-radius:18px;text-decoration:none;
   /* --riot-deep, not --riot, and pure white: MEASURED in the browser, not
      guessed. On --riot (#FF4A1C) the two smaller lines came out at 3.03 against
      the 4.5 that small text needs — a real accessibility failure that looks
@@ -168,7 +170,7 @@ img{display:block}
        TikTok description points at, and voting is the one action worth more
        than a tap through to the App Store.
        NOTE: deliberately NO date in this copy. This is a static file, so a
-       hardcoded "closes Sept 1" would be wrong every month and nothing here
+       fixed "closes Sept 1" would be wrong every month and nothing here
        would ever correct it. The live countdown lives on the board itself. -->
   <a class="lt-vote" href="/vote" data-reveal>
     <span class="lt-vote-txt">
