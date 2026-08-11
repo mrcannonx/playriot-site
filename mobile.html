@@ -68,6 +68,32 @@ img{display:block}
 .lt-chip .live::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--riot);animation:ping 2s var(--ease) infinite}
 @keyframes ping{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(2.7);opacity:0}}
 
+/* ---- VOTE ROW (Build Board) ---- */
+.lt-vote{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  margin-top:26px;padding:18px 20px;border-radius:18px;text-decoration:none;
+  /* --riot-deep, not --riot, and pure white: MEASURED in the browser, not
+     guessed. On --riot (#FF4A1C) the two smaller lines came out at 3.03 against
+     the 4.5 that small text needs — a real accessibility failure that looks
+     completely fine to the eye. On --riot-deep with white it measures 4.56.
+     Both values were read off the live page; do not swap this back. */
+  background:var(--riot-deep);color:#fff;
+  box-shadow:0 10px 26px -12px rgba(217,60,18,.75);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.lt-vote:active{transform:scale(.985);box-shadow:0 6px 16px -10px rgba(255,74,28,.8)}
+.lt-vote-txt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lt-vote-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;
+  font-weight:700;letter-spacing:.09em;text-transform:uppercase;opacity:.92}
+.lt-vote-eyebrow .live{width:7px;height:7px;border-radius:50%;background:var(--paper);
+  position:relative;flex:0 0 auto}
+.lt-vote-eyebrow .live::after{content:"";position:absolute;inset:0;border-radius:50%;
+  background:var(--paper);animation:ping 2s var(--ease) infinite}
+.lt-vote-title{font-size:1.22rem;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+.lt-vote-sub{font-size:.9rem;opacity:.93}
+.lt-vote-arrow{flex:0 0 auto;opacity:.95}
+@media (prefers-reduced-motion:reduce){
+  .lt-vote,.lt-vote-eyebrow .live::after{transition:none;animation:none}
+}
+
 /* ---- SECTION HEAD ---- */
 .section-head{margin:0}
 .section-head h2{font-size:clamp(1.75rem,6.5vw,2.35rem)}
@@ -137,6 +163,23 @@ img{display:block}
     <p class="lt-sub">Built fast, with AI, by a 20-year Navy veteran who’d rather finish than pitch.</p>
     <span class="lt-chip"><i class="live" aria-hidden="true"></i><span data-count>25</span>&nbsp;live on the App Store</span>
   </header>
+
+  <!-- VOTE — Build Board. Top of the page on purpose: this is the link the
+       TikTok description points at, and voting is the one action worth more
+       than a tap through to the App Store.
+       NOTE: deliberately NO date in this copy. This is a static file, so a
+       hardcoded "closes Sept 1" would be wrong every month and nothing here
+       would ever correct it. The live countdown lives on the board itself. -->
+  <a class="lt-vote" href="/vote" data-reveal>
+    <span class="lt-vote-txt">
+      <span class="lt-vote-eyebrow"><i class="live" aria-hidden="true"></i>Voting is open</span>
+      <strong class="lt-vote-title">Vote for the next app</strong>
+      <span class="lt-vote-sub">You pick it. I build it this month.</span>
+    </span>
+    <svg class="lt-vote-arrow" viewBox="0 0 24 24" width="26" height="26" fill="none"
+         stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+  </a>
 
   <!-- THE WORK -->
   <section class="apps" id="apps">
