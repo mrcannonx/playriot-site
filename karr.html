@@ -23,7 +23,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=2" />
+<link rel="stylesheet" href="styles.css?v=3" />
 <style>
 /* ============ KARR public-safety guide — namespaced .k- ============ */
 .k-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,56px)}
@@ -129,6 +129,9 @@
 @media(max-width:760px){
   .k-checks{grid-template-columns:1fr}
   .k-two{grid-template-columns:1fr}
+  /* styles.css only hides <a> children of .nav-links on small screens, so this <span> stayed in
+     the bar and pushed it 85px past a 375px screen. It was already cut off and unreadable there. */
+  .k-navtag{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   .k-led,.k-hero .eyebrow::before{animation:none!important}
