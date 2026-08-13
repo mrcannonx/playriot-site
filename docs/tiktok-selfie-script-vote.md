@@ -1,4 +1,26 @@
-# TikTok Selfie Script — Vote / Community Push
+# TikTok Selfie Scripts — Channel Intro + Vote Push
+
+## CHANNEL INTRO (pin this one)
+
+**Length:** ~30 seconds (short cut: ~18 seconds)
+
+### Full intro (~30s)
+
+```
+Yo, what's good? I'm Cannon. I'm from Baltimore, and I build apps for a living. Real apps — in the App Store right now. So here's what this page is. I show you what I'm building, how it's going, the wins, the flops, all of it. And the fun part? YOU vote on what I build next. Link in my bio takes you straight to the board. So if you ever said "somebody should make an app for that" — follow me. Because now somebody will. Me.
+```
+
+### Short intro (~18s)
+
+```
+Yo, what's good? I'm Cannon, from Baltimore, and I build apps for a living. On this page you watch me build them — and YOU vote on what I build next. Link in my bio. If you ever said "somebody should make an app for that" — follow me. Now somebody will.
+```
+
+**Delivery:** the closer is the hook — pause before "Me." and grin. Pin this video to the top of the profile.
+
+---
+
+# Vote / Community Push
 
 **Channel:** PLAYRIOT app TikTok
 **Length:** ~25 seconds (short cut: ~15 seconds)
