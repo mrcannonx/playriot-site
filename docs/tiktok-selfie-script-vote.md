@@ -7,13 +7,13 @@
 ### Full intro (~30s)
 
 ```
-Yo, what's good? I'm Cannon. I'm from Baltimore, and I build apps for a living. Real apps — in the App Store right now. So here's what this page is. I show you what I'm building, how it's going, the wins, the flops, all of it. And the fun part? YOU vote on what I build next. Link in my bio takes you straight to the board. So if you ever said "somebody should make an app for that" — follow me. Because now somebody will. Me.
+Yo, what's good? I'm Cannon, and I build apps for a living. Real apps — in the App Store right now. So here's what this page is. I show you what I'm building, how it's going, the wins, the flops, all of it. And the fun part? YOU vote on what I build next. Link in my bio takes you straight to the board. So if you ever said "somebody should make an app for that" — follow me. Because now somebody will. Me.
 ```
 
 ### Short intro (~18s)
 
 ```
-Yo, what's good? I'm Cannon, from Baltimore, and I build apps for a living. On this page you watch me build them — and YOU vote on what I build next. Link in my bio. If you ever said "somebody should make an app for that" — follow me. Now somebody will.
+Yo, what's good? I'm Cannon, and I build apps for a living. On this page you watch me build them — and YOU vote on what I build next. Link in my bio. If you ever said "somebody should make an app for that" — follow me. Now somebody will.
 ```
 
 **Delivery:** the closer is the hook — pause before "Me." and grin. Pin this video to the top of the profile.
@@ -24,7 +24,7 @@ Yo, what's good? I'm Cannon, from Baltimore, and I build apps for a living. On t
 
 **Channel:** PLAYRIOT app TikTok
 **Length:** ~25 seconds (short cut: ~15 seconds)
-**Tone:** Black guy from Baltimore city, friendly, talking straight to camera
+**Tone:** Black guy from Baltimore city, friendly, talking straight to camera — Baltimore sets the VOICE only; never say "Baltimore" in a script or caption (Cannon, 2026-08-13)
 **Must hit:** link in bio · voting feature · follow + like (build the TikTok community)
 
 ---
