@@ -1,0 +1,6 @@
+# Scratch left by headless-Chrome tooling (update-og-count.py). The script now
+# uses a temp dir, but an older run may have dropped .og_chrome/ here — a Chrome
+# profile is hundreds of files and must never ride along in a commit.
+.og_chrome/
+.og_line.html
+.og_line.png

@@ -75,6 +75,9 @@ const APPS = [
   { slug:"emerit",      name:"Emerit",             cat:"VA benefits", url:"https://apps.apple.com/us/app/id6795649491?pt=127481835&ct=playriot&mt=8",
     prob:"The VA pay you’re already owed and never knew to ask for.",
     desc:"Special Monthly Compensation is a separate pay system that sits on top of your combined rating, and most veterans have never heard of it. Emerit asks plain questions about your day, then shows which levels you look eligible for and what each one pays at the current rate. It works back pay out month by month if your effective date should have been earlier, and flags which of your ratings can no longer be cut — every answer tied to the federal rule it came from." },
+  { slug:"tend",        name:"Tend",               cat:"Family mornings",url:"https://apps.apple.com/us/app/id6773591024?pt=127481835&ct=playriot&mt=8",
+    prob:"Get everyone out the door without the morning battle.",
+    desc:"Kids get a stack of big picture cards they tap as they go, so a child who cannot read yet can run their own morning. Parents get a live view of where everyone actually is, and every caregiver sees the same thing on their own phone — with a hand-off note for whoever takes the next shift. Nothing punishes a missed step: no streaks to break, no disappointed mascot." },
 ];
 
 const el = (tag, cls, text) => {

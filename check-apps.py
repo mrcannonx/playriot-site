@@ -164,8 +164,12 @@ def main():
         for p in problems:
             print(f"  x {p}")
         print("\nFix: add the app to script.js APPS + mobile.html work-index "
-              "(and assets/icons/<slug>.png), update the meta counts, bump "
-              "assets/og.png's ?v= and its baked '<n> apps live' line.")
+              "(and assets/icons/<slug>.png), update the meta counts, then run "
+              "`python3 update-og-count.py` and bump assets/og.png's ?v= in "
+              "index.html AND mobile.html.")
+        print("     (og.png's count is baked into the PIXELS -- this checker is "
+              "structurally blind to it. It read '24 apps' for weeks. The script "
+              "repaints it; nothing else can.)")
         return 1
 
     print(f"IN SYNC -- both lists carry all {n} live apps; "
